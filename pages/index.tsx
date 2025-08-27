@@ -7,7 +7,7 @@ const SITE = {
   tagline: "I turn data into crisp, actionable insight.",
   email: "ruifeng.tian.2026@marshall.usc.edu",
   socials: {
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/usc-marshall-trf/",
     github: "https://github.com/",
     resume: "#"
   }
