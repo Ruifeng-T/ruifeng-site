@@ -2,12 +2,12 @@ import Head from 'next/head'
 import { Mail, Linkedin, Github, FileText, ArrowRight } from 'lucide-react'
 
 const SITE = {
-  name: "Ruifeng Tian",
+  name: "Ruifeng(Vincent)Tian",
   title: "Business / Data Analyst",
   tagline: "I turn data into crisp, actionable insight.",
   email: "ruifeng.tian.2026@marshall.usc.edu",
   socials: {
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/usc-marshall-trf/",
     github: "https://github.com/",
     resume: "#"
   }
@@ -81,9 +81,9 @@ export default function Home() {
         <section id="about" className="py-10">
           <h2 className="text-3xl font-semibold tracking-tight mb-4">About</h2>
           <div className="card text-slate-600">
-            I am a business/data analyst who enjoys turning messy, real-world data into clear insights that move teams forward. 
-            I work equally well at the macro (market, strategy, structure) and micro (metrics, pipelines, dashboards) levels, 
-            and I value straightforward communication and collaborative problem-solving.
+            I’m Ruifeng (Vincent) Tian, a Business Analytics professional at USC Marshall. 
+            I focus on transforming complex data into actionable insights that drive smarter decisions and meaningful business outcomes. 
+            My background in economics and hands-on experience across healthcare, finance, and technology allow me to bridge analytics with strategy — turning information into impact.
           </div>
         </section>
 
@@ -100,16 +100,16 @@ export default function Home() {
                 <span className="chip">Python</span>
                 <span className="chip">R</span>
                 <span className="chip">Tableau</span>
-                <span className="chip">Basic ML</span>
+                <span className="chip"> Machine Learning</span>
+                <span className="chip">GenerativeAI</span>
               </div>
             </div>
             {/* Soft */}
             <div className="card">
               <h3 className="text-lg font-semibold mb-2">Soft Skills</h3>
               <div className="flex flex-wrap gap-2">
-                <span className="chip">Communication</span>
-                <span className="chip">Teamwork</span>
                 <span className="chip">Cross-functional Collaboration</span>
+                <span className="chip">Communication</span>
                 <span className="chip">Stakeholder Reporting</span>
               </div>
             </div>
@@ -125,8 +125,46 @@ export default function Home() {
               <p className="text-sm text-slate-500">September 2025</p>
               <p className="mt-2 text-slate-600">Click to see details →</p>
             </a>
+            <a href="/projects/meituan-optimization" className="min-w-[350px] card block hover:shadow-md transition">
+  <h3 className="text-lg font-semibold">🚴 Meituan Business Analytics Elite Competition</h3>
+  <p className="text-sm text-slate-500">October 2025</p>
+  <p className="mt-2 text-slate-600">Click to see details →</p>
+</a>
+
           </div>
         </section>
+
+        {/* Interests */}
+        <section id="interests" className="py-10">
+          <h2 className="text-3xl font-semibold tracking-tight mb-4">Interests</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+    
+    {/* Bodybuilding */}
+    <div className="card text-center">
+      <span className="text-2xl">💪</span>
+      <p className="mt-2 text-sm font-medium text-slate-600">Bodybuilding</p>
+    </div>
+
+    {/* Whiskey */}
+    <div className="card text-center">
+      <span className="text-2xl">🥃</span>
+      <p className="mt-2 text-sm font-medium text-slate-600">Whiskey</p>
+    </div>
+
+    {/* Cooking */}
+    <div className="card text-center">
+      <span className="text-2xl">🍳</span>
+      <p className="mt-2 text-sm font-medium text-slate-600">Cooking</p>
+    </div>
+
+    {/* Tennis */}
+    <div className="card text-center">
+      <span className="text-2xl">🎾</span>
+      <p className="mt-2 text-sm font-medium text-slate-600">Tennis</p>
+    </div>
+
+  </div>
+</section>
 
         {/* Contact */}
         <section id="contact" className="py-10">
