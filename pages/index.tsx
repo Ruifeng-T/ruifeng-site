@@ -69,7 +69,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">What I Bring</h3>
               <ul className="space-y-3 text-sm text-slate-600">
                 <li><strong>Explain business problems with data.</strong> Build metric systems, detect anomalies, validate causality, and turn results into playbooks.</li>
-                <li><strong>Pragmatic risk & compliance mindset.</strong> Hands-on with GRC / internal controls—balancing speed and robustness.</li>
+                <li><strong>Applied economic and econometric reasoning.</strong> Combine theoretical modeling with empirical validation to evaluate trade-offs between efficiency, risk, and regulatory constraints.</li>
                 <li><strong>Clear communication & collaboration.</strong> Distill complex findings into crisp narratives for decision-makers.</li>
               </ul>
               <p className="mt-4 text-xs text-slate-500">Target roles: Business Analysis · Data Analysis · Strategy Research</p>
