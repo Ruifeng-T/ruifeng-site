@@ -128,49 +128,40 @@ export default function MeituanOptimization() {
           </p>
         </section>
 
-        {/* 4. Weighted Performance Score */}
-        <section className="card space-y-4 mb-8">
-          <h2 className="text-2xl font-semibold">4) Weighted Performance Score</h2>
-          <p className="text-slate-700">
-            To identify high-performing riders and quantify their performance, we constructed a
-            weighted performance scoring system. In the model design, three core KPIs were selected:
-          </p>
-          <ul className="list-disc pl-6 text-slate-700">
-            <li><strong>On-time rate (x₁):</strong> proportion of completed orders delivered on time</li>
-            <li><strong>Active time rate (x₂):</strong> proportion of logged-in time spent actively taking orders</li>
-            <li><strong>Rejection rate (x₃):</strong> proportion of orders rejected out of total orders</li>
-          </ul>
+{/* 4. Weighted Performance Score */}
+<section className="card space-y-4 mb-8">
+  <h2 className="text-2xl font-semibold">4) Weighted Performance Score</h2>
 
-          <p className="text-slate-700">
-            We then applied a Logistic Regression model to evaluate the predictive power of each KPI 
-            for determining whether a rider belongs to the “high performer” group (y=1).
-          </p>
+  <p className="text-slate-700">
+    To identify high-performing riders and quantify their performance, we developed a weighted performance scoring system based on operational priorities and business relevance. Three core KPIs were selected:
+  </p>
 
-          <p className="text-slate-700">
-            Where:
-          </p>
-          <ul className="list-disc pl-6 text-slate-700">
-            <li><strong>P(y=1|x):</strong> probability that a rider is classified as a high performer</li>
-            <li><strong>β₀:</strong> intercept term</li>
-            <li><strong>β₁, β₂, β₃:</strong> coefficients for the three KPIs, representing their relative importance</li>
-          </ul>
+  <ul className="list-disc pl-6 text-slate-700">
+    <li><strong>On-time rate (x₁):</strong> proportion of completed orders delivered on time</li>
+    <li><strong>Active time rate (x₂):</strong> proportion of logged-in time spent actively taking orders</li>
+    <li><strong>Rejection rate (x₃):</strong> proportion of orders rejected out of total orders</li>
+  </ul>
 
-          <p className="text-slate-700">
-            To prevent overfitting, we adopted 5-fold cross-validation to evaluate model performance. 
-            The final weights were determined based on the average validation results. 
-            After normalization, the weighted score formula is:
-          </p>
+  <p className="text-slate-700">
+    Initial weights were determined according to business judgment, reflecting the relative operational importance of each KPI. 
+    A Logistic Regression model was subsequently applied <strong>not to estimate coefficients, but to validate the directional and relative effects</strong> of these KPIs in predicting whether a rider belongs to the “high performer” group (y = 1).
+  </p>
 
-          <div className="rounded-xl bg-slate-50 border p-4 text-slate-800 text-sm font-mono">
-            Score = 0.4 * x₁ + 0.3 * x₂ − 0.3 * x₃
-          </div>
+  <p className="text-slate-700">
+    The validation confirmed that <em>on-time rate</em> and <em>active time rate</em> have positive impacts on performance, while <em>rejection rate</em> negatively correlates with it—consistent with the proposed weighting logic. 
+    After normalization, the finalized weighted score formula is:
+  </p>
 
-          <p className="text-slate-700">
-            Based on this scoring system, we computed each rider’s composite score and plotted its distribution.
-            Results show that riders in the top 25% of the score distribution can be effectively identified as
-            high performers, who significantly outperform the average in both efficiency and service quality.
-          </p>
-        </section>
+  <div className="rounded-xl bg-slate-50 border p-4 text-slate-800 text-sm font-mono">
+    Score = 0.4 × x₁ + 0.3 × x₂ − 0.3 × x₃
+  </div>
+
+  <p className="text-slate-700">
+    Based on this scoring system, riders in the top 25% of the score distribution were classified as high performers, 
+    who consistently outperform the average in both delivery efficiency and service quality.
+  </p>
+</section>
+
     {/* 5. Logistic Regression Analysis */}
         <section className="card space-y-4 mb-8">
           <h2 className="text-2xl font-semibold">5) Logistic Regression Analysis</h2>
