@@ -153,7 +153,7 @@ export default function MeituanOptimization() {
   </p>
 
   <div className="rounded-xl bg-slate-50 border p-4 text-slate-800 text-sm font-mono">
-    Score = 0.4 × x₁ + 0.3 × x₂ − 0.3 × x₃
+    Score = 0.4 * x₁ + 0.3 * x₂ − 0.3 * x₃
   </div>
 
   <p className="text-slate-700">
