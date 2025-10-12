@@ -156,10 +156,6 @@ export default function MeituanOptimization() {
     Score = 0.4 * x₁ + 0.3 * x₂ − 0.3 * x₃
   </div>
 
-  <p className="text-slate-700">
-    Based on this scoring system, riders in the top 25% of the score distribution were classified as high performers, 
-    who consistently outperform the average in both delivery efficiency and service quality.
-  </p>
 </section>
 
     {/* 5. Logistic Regression Analysis */}
