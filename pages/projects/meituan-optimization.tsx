@@ -223,16 +223,16 @@ export default function MeituanOptimization() {
   <ul className="list-disc pl-6 text-slate-700 space-y-1">
     <li>
       <strong>Emerging Female Riders (27):</strong> younger, short tenure, higher inactivity risk.  
-      <span className="block text-slate-500">Attrition risk ≈ 15%</span>
+      <span className="block text-slate-500">Attrition risk ≈ 10%</span>
     </li>
     <li>
       <strong>Core Middle-aged Males (68):</strong> longest tenure, stable but moderate inactivity.  
-      <span className="block text-slate-500">Attrition risk ≈ 10%</span>
+      <span className="block text-slate-500">Attrition risk ≈ 26%</span>
     </li>
     <li>
       <strong>Low-info Males (165):</strong> incomplete demographic profiles, short tenure, 
       highest inactivity rate.  
-      <span className="block text-slate-500">Attrition risk ≈ 18%</span>
+      <span className="block text-slate-500">Attrition risk ≈ 62%</span>
     </li>
   </ul>
 
