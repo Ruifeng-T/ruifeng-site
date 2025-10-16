@@ -343,7 +343,7 @@ export default function MeituanOptimization() {
 
   <h3 className="text-lg font-semibold mb-2">(2)Female Rider Engagement & Safety Support</h3>
   <p className="text-slate-700 mb-4">
-    Emerging female riders show the highest attrition risk (~15%) due to limited tenure and safety concerns. 
+    Emerging female riders show the highest attrition risk (~26%) due to limited tenure and safety concerns. 
     Flexible scheduling, safer route assignments, and gender-sensitive incentive schemes could reduce dropouts and improve engagement.
   </p>
 
@@ -355,7 +355,7 @@ export default function MeituanOptimization() {
 
   <h3 className="text-lg font-semibold mb-2">(4)Weather-Responsive Dispatch & Communication</h3>
   <p className="text-slate-700 mb-4">
-    Random Forest analysis shows that younger, childless male riders perform better in adverse weather, while rejection rates rise overall. 
+    Random Forest analysis shows that age and child——status are key factors that affact performance, while rejection rates rise overall. 
     A weather-based dispatch algorithm, combined with dynamic bonuses and clear rider–customer communication, can enhance fairness, safety, and service reliability.
   </p>
 </section>
