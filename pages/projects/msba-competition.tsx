@@ -45,8 +45,9 @@ export default function MSBACompetition() {
       {/* 图片轮播 */}
       <PlanCarousel
         images={[ 
-          { src: "/images/impl/1.jpg", caption: "第一张图片" },
-          { src: "/images/impl/2.jpg", caption: "第二张图片" },
+          { src: "/images/impl/1.jpg", caption: "picture1" },
+          { src: "/images/impl/2.jpg", caption: "picture2" },
+          { src: "/images/impl/3.jpg", caption: "pictute3" },
         ]}
       />
 

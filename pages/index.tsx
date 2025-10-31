@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { Mail, Linkedin, Github, FileText, ArrowRight } from 'lucide-react'
+import emailjs from "emailjs-com";
 
 const SITE = {
   name: "Ruifeng(Vincent)Tian",
@@ -33,9 +34,6 @@ export default function Home() {
             <a className="hover:underline" href="#skills">Skills</a>
             <a className="hover:underline" href="#projects">Projects</a>
             <a className="hover:underline" href="#contact">Contact</a>
-            <a className="btn btn-primary text-sm" href={SITE.socials.resume} target="_blank" rel="noreferrer">
-              <FileText className="w-4 h-4" /> Resume
-            </a>
           </div>
         </nav>
       </header>
@@ -64,17 +62,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full">
-            <div className="card">
-              <h3 className="text-lg font-semibold mb-4">What I Bring</h3>
-              <ul className="space-y-3 text-sm text-slate-600">
-                <li><strong>Explain business problems with data.</strong> Build metric systems, detect anomalies, validate causality, and turn results into playbooks.</li>
-                <li><strong>Applied economic and econometric reasoning.</strong> Combine theoretical modeling with empirical validation to evaluate trade-offs.</li>
-                <li><strong>Clear communication & collaboration.</strong> Distill complex findings into crisp narratives for decision-makers.</li>
-              </ul>
-              <p className="mt-4 text-xs text-slate-500">Target roles: Economic consulting · Business Analysis · Strategy Research</p>
-            </div>
-          </div>
+<div className="w-full">
+  <div className="card">
+    <h3 className="text-lg font-semibold mb-4">What I Bring</h3>
+    <ul className="space-y-3 text-sm text-slate-600">
+      <li>
+        <strong>Teamwork & collaboration.</strong> Work effectively in diverse teams, support one another, and move work forward through clear coordination and interpersonal skills.
+      </li>
+      <li>
+        <strong>Macro reasoning + data-driven validation.</strong> Blend macro-level framing with machine learning as a data-driven method, grounded in a multi-industry background to deliver practical, evidence-based solutions.
+      </li>
+      <li>
+        <strong>Executive-ready delivery.</strong> Build stakeholder-facing dashboards and narrative slide decks that distill complex analysis into clear business decisions.
+      </li>
+    </ul>
+  </div>
+</div>
+
         </section>
 
         {/* About */}
@@ -187,13 +191,55 @@ export default function Home() {
             </div>
 
             <div className="card">
-              <h3 className="text-lg font-semibold mb-3">Quick Message (Demo)</h3>
-              <form onSubmit={(e) => { e.preventDefault(); alert("Demo form only — connect it to your backend or a form service."); }} className="space-y-3">
-                <input className="w-full border rounded-xl px-3 py-2" placeholder="Your name" required />
-                <input className="w-full border rounded-xl px-3 py-2" type="email" placeholder="Email" required />
-                <textarea className="w-full border rounded-xl px-3 py-2" placeholder="What would you like to talk about?" rows={5} required />
-                <button type="submit" className="w-full btn btn-primary">Send</button>
-              </form>
+              <h3 className="text-lg font-semibold mb-3">Quick Message</h3>
+<form
+  onSubmit={(e: any) => {
+    e.preventDefault();
+
+    emailjs.send(
+      "RuifengTian",           // ✅ Service ID
+      "template_jmw6x4x",      // ✅ Template ID
+      {
+        from_name: e.target[0].value,   // 第一个 input
+        reply_to: e.target[1].value,    // 第二个 input
+        message: e.target[2].value,     // textarea
+      },
+      "g1AU8NQmE_4MPnE3Q"   // ✅ 你自己的 Public Key
+    )
+    .then(() => {
+      alert("✅ Message sent successfully!");
+      e.target.reset();
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("❌ Failed to send message, try again later.");
+    });
+  }}
+  className="space-y-3"
+>
+  <input
+    name="from_name"
+    className="w-full border rounded-xl px-3 py-2"
+    placeholder="Your name"
+    required
+  />
+  <input
+    name="reply_to"
+    className="w-full border rounded-xl px-3 py-2"
+    type="email"
+    placeholder="Email"
+    required
+  />
+  <textarea
+    name="message"
+    className="w-full border rounded-xl px-3 py-2"
+    placeholder="What would you like to talk about?"
+    rows={5}
+    required
+  />
+  <button type="submit" className="w-full btn btn-primary">Send</button>
+</form>
+
             </div>
           </div>
         </section>
