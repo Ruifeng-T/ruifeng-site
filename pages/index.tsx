@@ -3,14 +3,14 @@ import { Mail, Linkedin, Github, FileText, ArrowRight } from 'lucide-react'
 import emailjs from "emailjs-com";
 
 const SITE = {
-  name: "Ruifeng(Vincent)Tian",
+  name: "Ruifeng (Vincent) Tian",
   tagline: "I turn data into crisp, actionable insight.",
   email: "ruifeng.tian.2026@marshall.usc.edu",
   socials: {
     linkedin: "https://www.linkedin.com/in/usc-marshall-trf/",
-    github: "https://github.com/",
-    resume: "#"
-  }
+    github: "https://github.com/Ruifeng-T",
+    resume: "#",
+  },
 };
 
 export default function Home() {
@@ -76,6 +76,8 @@ export default function Home() {
     </ul>
   </div>
 </div>
+
+        </section>
 
 {/* About */}
 <section id="about" className="py-10">
