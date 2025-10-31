@@ -4,7 +4,6 @@ import emailjs from "emailjs-com";
 
 const SITE = {
   name: "Ruifeng(Vincent)Tian",
-  title: "Business / Data Analyst",
   tagline: "I turn data into crisp, actionable insight.",
   email: "ruifeng.tian.2026@marshall.usc.edu",
   socials: {
