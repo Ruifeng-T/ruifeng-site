@@ -46,7 +46,6 @@ export default function Home() {
               Open to Summer 2026 internships
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">{SITE.name}</h1>
-            <p className="mt-3 text-xl text-slate-500">{SITE.title}</p>
             <p className="mt-4 text-slate-600 max-w-prose">{SITE.tagline}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a className="btn btn-primary" href="#contact">
