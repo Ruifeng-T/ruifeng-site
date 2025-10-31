@@ -77,17 +77,36 @@ export default function Home() {
   </div>
 </div>
 
-        </section>
+{/* About */}
+<section id="about" className="py-10">
+  <h2 className="text-3xl font-semibold tracking-tight mb-4">About</h2>
+  <div className="card text-slate-600 space-y-4 leading-relaxed">
+    <p>
+      Hi, my name is <strong>Ruifeng Tian</strong>, but feel free to call me <strong>Vincent</strong>. 
+      I’m someone who truly believes in the power of collaboration — I find energy and meaning in 
+      working with others, supporting teammates, and building things together.
+    </p>
 
-        {/* About */}
-        <section id="about" className="py-10">
-          <h2 className="text-3xl font-semibold tracking-tight mb-4">About</h2>
-          <div className="card text-slate-600">
-            I’m Ruifeng (Vincent) Tian, a Business Analytics professional at USC Marshall. 
-            I focus on transforming complex data into actionable insights that drive smarter decisions and meaningful business outcomes. 
-            My background in economics and hands-on experience across healthcare, finance, and technology allow me to bridge analytics with strategy — turning information into impact.
-          </div>
-        </section>
+    <p>
+      With a background in <strong>Economics</strong> from the University of Washington and current 
+      <strong> MSBA</strong> training at USC, I combine macro-level reasoning with data-driven methods 
+      to analyze complex problems and deliver practical, actionable insights. My internships across 
+      <strong> finance, healthcare, and technology</strong> have shaped a cross-industry mindset that 
+      helps me bridge strategy and analytics.
+    </p>
+
+    <p>
+      I’m naturally curious and self-disciplined — I enjoy setting goals, taking initiative, and 
+      constantly learning new things, whether it’s mastering a new model or creating AI-powered 
+      projects like this website.
+    </p>
+
+    <p>
+      Thanks for taking the time to read my little biography — I hope you have a wonderful day ahead!
+    </p>
+  </div>
+</section>
+
 
         {/* Skills */}
         <section id="skills" className="py-10">
